@@ -1,3 +1,9 @@
+# Status
+
+December 2022
+
+Seems to be fixed. The medication shows fine with contained resources too.
+
 # testMed
 
 MedicationStatement testing for contained error.
