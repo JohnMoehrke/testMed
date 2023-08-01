@@ -25,6 +25,7 @@ Usage: #example
 * partOf[+] = Reference(in-Dispense)
 * basedOn = Reference(in-Request)
 * identifier.value = "1234" // The prescription number
+* contained[+] = in-Provenance
 * derivedFrom = Reference(in-Provenance)
 
 Instance: in-Dispense
