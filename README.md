@@ -1,8 +1,12 @@
 # Status
 
+August 2023
+
+Added example of a contained Provenance. Works fine.
+
 December 2022
 
-Seems to be fixed. The medication shows fine with contained resources too.
+The original problem with rendering contained resources seems to be fixed. The medication shows fine with contained resources too.
 
 # testMed
 
