@@ -25,6 +25,7 @@ Usage: #example
 * partOf[+] = Reference(in-Dispense)
 * basedOn = Reference(in-Request)
 * identifier.value = "1234" // The prescription number
+* derivedFrom = Reference(in-Provenance)
 
 Instance: in-Dispense
 InstanceOf: MedicationDispense
@@ -51,6 +52,16 @@ Usage: #inline
 * subject = Reference(Patient/ex-patient)
 * requester.display = "Dr. Prancy Practitioner"
 * identifier.value = "1234" // The prescription number
+
+Instance: in-Provenance
+InstanceOf: Provenance
+Usage: #inline
+* target = Reference(ex-medication-0)
+* occurredDateTime = "2020-11-24"
+* recorded = "2020-11-24T13:00:00.0000Z"
+* agent.type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author
+* agent.who = Reference(ex-patient)
+
 
 Instance:   ex-patient
 InstanceOf: Patient
