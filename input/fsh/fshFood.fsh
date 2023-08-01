@@ -19,14 +19,13 @@ Usage: #example
 * dosage.route = http://snomed.info/sct#26643006
 * medicationCodeableConcept.text = "Tylenol"
 * reasonCode.text = "Body pains"
+* contained[+] = in-Provenance
 * contained[+] = in-Pharmacy
 * contained[+] = in-Dispense
 * contained[+] = in-Request
 * partOf[+] = Reference(in-Dispense)
 * basedOn = Reference(in-Request)
 * identifier.value = "1234" // The prescription number
-* contained[+] = in-Provenance
-* derivedFrom = Reference(in-Provenance)
 
 Instance: in-Dispense
 InstanceOf: MedicationDispense
@@ -57,7 +56,7 @@ Usage: #inline
 Instance: in-Provenance
 InstanceOf: Provenance
 Usage: #inline
-* target = Reference(ex-medication-0)
+* target.reference = "#"
 * occurredDateTime = "2020-11-24"
 * recorded = "2020-11-24T13:00:00.0000Z"
 * agent.type = http://terminology.hl7.org/CodeSystem/provenance-participant-type#author
