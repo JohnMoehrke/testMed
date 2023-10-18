@@ -1,5 +1,9 @@
 # Status
 
+October 2023
+
+used to test extension for artifact name and description that can be carried directly in xml/json examples. 
+
 August 2023
 
 Added example of a contained Provenance. Works fine.
