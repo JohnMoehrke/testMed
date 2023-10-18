@@ -5,10 +5,10 @@
           <profile value="https://department-of-veterans-affairs.github.io/mhv-fhir-phr-mapping/StructureDefinition/VA.MHV.PHR.imaging"/>
        </meta>
        <extension url="http://hl7.org/fhir/StructureDefinition/resource-instance-name">
-          <valueString value="Radiology JFM Note: 6959075.8874-1"/>
+          <valueString value="JFM Resource Name - Radiology: 6959075.8874-1"/>
        </extension>
        <extension url="http://hl7.org/fhir/StructureDefinition/resource-instance-description">
-          <valueMarkdown value="JFM Note: SPINE LUMBOSACRAL MIN 2 VIEWS"/>
+          <valueMarkdown value="JFM Resource Description - SPINE LUMBOSACRAL MIN 2 VIEWS"/>
        </extension>
        <identifier>
           <use value="usual"/>
