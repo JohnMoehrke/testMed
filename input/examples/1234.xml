@@ -3,13 +3,25 @@
        <id value="1234"/>
        <meta>
        <extension url="http://hl7.org/fhir/StructureDefinition/instance-name">
-          <valueString value="JFM Resource Name - Radiology: 6959075.8874-1"/>
+          <valueString value="JFM Instance Name - Radiology: 6959075.8874-1"/>
        </extension>
        <extension url="http://hl7.org/fhir/StructureDefinition/instance-description">
-          <valueMarkdown value="JFM Resource Description - SPINE LUMBOSACRAL MIN 2 VIEWS"/>
+          <valueMarkdown value="JFM Instance Description - SPINE LUMBOSACRAL MIN 2 VIEWS"/>
        </extension>
       </meta>
-       <identifier>
+      <extension url="http://hl7.org/fhir/StructureDefinition/resource-instance-name">
+         <valueString value="JFM Resource-Instance Name - Radiology: 6959075.8874-1"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/resource-instance-description">
+         <valueMarkdown value="JFM Resource-Instance Description - SPINE LUMBOSACRAL MIN 2 VIEWS"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/artifact-title">
+         <valueString value="JFM Artifact Title - Radiology: 6959075.8874-1"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/StructureDefinition/artifact-description">
+         <valueMarkdown value="JFM Artifact Description - SPINE LUMBOSACRAL MIN 2 VIEWS"/>
+      </extension>
+      <identifier>
           <use value="usual"/>
           <system value="urn:oid:2.16.840.1.113883.4.349.4.989"/>
           <value value="ImagingExamTO.6959075.8874-1"/>
