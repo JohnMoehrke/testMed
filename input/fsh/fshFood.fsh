@@ -1,3 +1,31 @@
+
+Extension: SourceId
+Id: sourceId
+Title: "test extension"
+Description: "blah blah"
+* ^context[+].type = #element
+* ^context[=].expression = "Patient"
+* value[x] only Identifier
+* valueIdentifier 1..1
+
+Instance: searchSourceId
+InstanceOf: SearchParameter
+Title: "search on the SourceId"
+Usage: #definition
+* url = "http://johnmoehrke.github.io/testmed/SearchParameter/searchSourceId"
+* description = "This SearchParameter blah blah."
+* name = "SourceId"
+* status = #active
+* code = #sourceId
+* base = #Patient
+* expression = "Patient.extension('http://johnmoehrke.github.io/testmed/StructureDefinition/sourceId').value.ofType(Identifier)"
+* type = #token
+
+Profile: XPatient
+Parent: Patient
+* extension contains SourceId named sourceId 0..1
+
+
 Instance:   ex-medication-0
 InstanceOf: MedicationStatement
 Title: "Example of a medication R4, minimal"
@@ -64,7 +92,7 @@ Usage: #inline
 
 
 Instance:   ex-patient
-InstanceOf: Patient
+InstanceOf: XPatient
 Title:      "Dummy Patient example"
 Description: "Dummy patient example for completeness sake. No actual use of this resource other than an example target"
 Usage: #example
