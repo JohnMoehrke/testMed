@@ -37,6 +37,9 @@ Usage: #inline
 * effectiveDateTime = 1995-08-03T14:49:00Z
 * performer = Reference(Organization/in-Organization)
 * subject = Reference(Patient/ex-patient)
+* note[+].text = "Hello"
+//* note[+].text = "world"
+// Two notes here will crash the publisher
 
 Instance: ex-labTest-4
 InstanceOf: Observation
@@ -49,6 +52,21 @@ Usage: #inline
 * performer = Reference(Organization/in-Organization)
 * subject = Reference(Patient/ex-patient)
 
+Instance: ex-labTest-5
+InstanceOf: Observation
+Title: "observation with notes"
+Description: "two notes in an example does not crash the publisher, but a contained same thing will crashe the publisher"
+Usage: #example
+* status = #final
+* category[+] = http://terminology.hl7.org/CodeSystem/observation-category#laboratory
+* code.text = "Parasitology Remark(s)"
+* valueString = "MODERATE WBC'S SEEN"
+* effectiveDateTime = 1995-08-03T14:49:00Z
+* performer = Reference(Patient/ex-patient)
+* subject = Reference(Patient/ex-patient)
+* note[+].text = "Hello"
+* note[+].text = "world"
+// this will not
 
 
 Instance: ex-labReport-2
