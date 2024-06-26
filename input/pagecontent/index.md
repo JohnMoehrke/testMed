@@ -1,6 +1,19 @@
 ### testMed
 
-No problems being shown, just a test IG.
+This is showing two bugs in the IG Publisher
+
+#### Rendering of Contained resources links
+
+When DiagnosticReport contains Observations. The IG Publihser tries to put links to the Observation rendering, but it doesn't exist. Resulting in links that don't work, and errors in the QA log
+
+- https://github.com/HL7/fhir-ig-publisher/issues/913
+
+#### Contained Observations with multiple notes
+
+If a contained Observation has more than one .note; the IG publisher will crash
+
+- github issue https://github.com/HL7/fhir-ig-publisher/issues/915
+- the testMed IG will not crash unless you remove the commented out second .note.
 
 ### Source
 
