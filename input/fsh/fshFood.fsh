@@ -23,7 +23,10 @@ Usage: #definition
 
 Profile: XPatient
 Parent: Patient
+Title: "XPatient"
+Description: "Patient profile with SourceID extension"
 * extension contains SourceId named sourceId 0..1
+
 
 
 Instance:   ex-medication-0
@@ -123,4 +126,4 @@ Usage: #example
 * birthDate = "1923-07-25"
 * address.state = "WI"
 * address.country = "USA"
-
+* extension[sourceId].valueIdentifier.value = "1234"
